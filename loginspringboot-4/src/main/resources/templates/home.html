@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Log In</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
+  </head>
+  
+  <body>
+    <div class="login">
+      <form th:action="@{/j_spring_security_check}" method="POST">
+        <div class="title">
+          <h2>Sign In</h2>
+          <img th:attr="src=@{/image/exit.png}" />
+        </div>
+        <p class="type">Login</p>
+        <br />
+        <br />
+        <div class="enter">
+          <input type="text" name="username" placeholder="Email" />
+          <img th:attr="src=@{/image/correct.png}" />
+        </div>
+        <p class="type">Password</p>
+        <br />
+        <br />
+        <div class="enter">
+          <input type="password" name="password" placeholder="Password" />
+          <img th:attr="src=@{/image/lock.png}" />
+        </div>
+        <br />
+        <br />
+        <button type="submit">Log In</button>
+        <br />
+        <br />
+        <button class="loginWithFB">
+          <a href="facebook.com">Log in with face book</a>
+        </button>
+        <br />
+        <br />
+        <a href="#">Forgot password?</a>
+      </form>
+    </div>
+  </body>
+  
+</html>
