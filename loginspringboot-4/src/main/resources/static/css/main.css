@@ -1,0 +1,141 @@
+body {
+	background-color: #000;
+	font-family: sans-serif;
+	text-align: center;
+}
+.login {
+	width: 540px;
+	padding: 20px 20px 36px 20px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px 0 rgba(3, 3, 4, 0.1), 0 0 1px 0
+		rgba(239, 242, 247, 0.5);
+	background-color: #fff;
+	margin: 0 auto;
+}
+.enter {
+	width: 500px;
+	height: auto;
+	margin: 8px 0 0;
+	padding: 6px 14px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 2px 0 rgba(102, 113, 123, 0.21), inset 0 0 0 1px
+		rgba(102, 113, 123, 0.25);
+	border: solid 1px #d3dce6;
+	background-color: #fff;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.enter img {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+.enter input {
+	border: none;
+	outline: none;
+	height: 46px;
+	padding-right: 20px;
+	width: 400px;
+}
+.login button {
+	width: 500px;
+	height: 60px;
+	margin: 0 20px;
+	padding: 20px 0;
+	border: none;
+	border-radius: 100px;
+	background-color: #0078e8;
+	color: #fff;
+	font-size: 20px;
+}
+.login button a {
+	color: white;
+}
+.login a {
+	text-decoration: none;
+}
+.type {
+	display: inline-block;
+	width: 43px;
+	margin: 0;
+	padding-top: 20px;
+	font-size: 17px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.18;
+	letter-spacing: 0.08px;
+	color: #b8c1cb;
+	float: left;
+	padding-left: 20px;
+}
+h2 {
+	display: inline-block;
+	width: 450px;
+	margin: 0;
+}
+.title img {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+@media ( min-width : 992px) {
+	.login {
+		width: 600px;
+	}
+	.enter {
+		width: 560px;
+	}
+	.enter img {
+		width: 26px;
+		height: 26px;
+	}
+	.enter input {
+		height: 56px;
+		width: 460px;
+	}
+	.login button {
+		width: 560px;
+	}
+	h2 {
+		display: inline-block;
+		width: 510px;
+		margin: 0;
+	}
+	.title img {
+		width: 22px;
+		height: 22px;
+	}
+}
+
+@media ( min-width : 1200px) {
+	.login {
+		width: 650px;
+	}
+	.enter {
+		width: 610px;
+	}
+	.enter img {
+		width: 28px;
+		height: 28px;
+	}
+	.enter input {
+		height: 58px;
+		width: 510px;
+	}
+	.login button {
+		width: 610px;
+	}
+	h2 {
+		display: inline-block;
+		width: 560px;
+		margin: 0;
+	}
+	.title img {
+		width: 24px;
+		height: 24px;
+	}
+	
+}

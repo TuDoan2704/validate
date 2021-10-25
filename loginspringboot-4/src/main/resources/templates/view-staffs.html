@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JSP Page</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<h2>LIST STAFFS</h2>
+		<br>
+		<div sec:authorize="isAuthenticated()">
+    		Welcome <b><span sec:authentication="name">Username</span></b>!
+    		&nbsp;
+   			<i><span sec:authentication="principal.authorities">Roles</span></i>
+		</div>
+		<br>
+		<form th:action="@{/logout}" method="post">
+    		<input type="submit" value="Logout" />
+		</form>
+		<br>
+		<p>
+			<a class="btn btn-primary" href="/information/">ADD STAFF</a>
+		</p>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th> Tên </th>
+					<th> Người sửa </th>
+					<th> Ngày sửa </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each = "staff: ${list}">
+					<td th:text = "${staff.id}"></td>					
+					<td th:text = "${staff.userName}"></td>
+					<td th:text = "${staff.modifiedBy}"></td>
+					<td th:text = "${staff.modifiedDate}"></td>		
+					<td><a class="btn btn-primary btn-sm" th:href="@{'/information/sua/'+${staff.id}}">Edit</a> 
+						<a class="btn btn-danger btn-sm" th:href="@{'/information/delete/'+${staff.id}}">Del</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
